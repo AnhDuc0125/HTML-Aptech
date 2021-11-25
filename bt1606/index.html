@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+    <script>
+        function cal(a,b,c) {
+            var del = b ** 2 - 4 * a * c;
+            var x2 = (-b - Math.sqrt(del)) / (2 * a);
+            var x1 = (-b + Math.sqrt(del)) / (2 * a);
+            if (del < 0) {
+                document.write('Phương trình vô nghiệm!!!');
+            } else if (del > 0) {
+                document.write('<h2>Phương trình có 2 nghiệm phân biệt:</h2>');
+                document.write('<h3>x<sub>1</sub> = ' + x1 + '</h3>');
+                document.write('<h3>x<sub>2</sub> = ' + x2 + '</h3>'); 
+            } else if (del = 0) {
+                document.write('Phương trình có nghiệm kép:');
+                document.write('x1 = x2 = ' + x1);
+            }
+        }
+
+        var a = prompt('Nhap gia tri cho a: ');
+        var b = prompt('Nhap gia tri cho b: ');
+        var c = prompt('Nhap gia tri cho c: ');
+        
+        cal(a,b,c);
+
+        
+    </script>
+</body>
+</html>

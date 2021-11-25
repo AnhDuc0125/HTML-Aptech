@@ -1,0 +1,22 @@
+.header {
+	display: inline-block;
+	margin-right: 90px;
+}
+
+.help {
+	padding: 10px 10px;
+}
+
+.help:hover {
+	cursor: help;
+}
+
+.title {
+	text-align: right;
+	vertical-align: top;
+}
+
+.all {
+	background-color:  #DDFFEE;
+	width: 500px;
+}

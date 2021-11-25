@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1 style="text-align:center">Tính toán</h1>
+    <br>
+    <script>
+        function plus (a,b) {
+            a = parseInt(a)
+            b = parseInt(b)
+            sum = a + b
+            alert('a + b = ' + sum)
+        }
+        function difference (a,b) {
+            a = parseInt(a)
+            b = parseInt(b)
+            diff = a - b
+            alert('a - b = ' + diff)
+        }
+        function product (a,b) {
+            a = parseInt(a)
+            b = parseInt(b)
+            pro = a * b
+            alert('a * b = ' + pro)
+        }
+        function quotient (a,b) {
+            a = parseInt(a)
+            b = parseInt(b)
+            quo = a + b
+            alert('a / b = ' + quo)
+        }
+        
+        a = prompt('Nhập giá trị cho a')
+        b = prompt('Nhập giá trị cho b')
+        // do {
+            operator = prompt ('Nhập phép toán bạn muốn thực hiện với a và b')
+        //     if(operator != + || operator != - || operator != * || operator != /) {
+        //         alert('Nhập lại đê sai rồi')
+        //     }
+        // } while (operator != '+' || operator != '-' || operator != '*' || operator != '/')
+        
+        switch(operator) {
+            case '+': plus(a,b)
+            break
+            case '-': difference(a,b)
+            break
+            case '*': product(a,b)
+            break
+            case '/': quotient(a,b)
+            break
+        }
+
+        
+
+    </script>
+</body>
+</html>
