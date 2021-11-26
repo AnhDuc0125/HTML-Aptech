@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th ,td {
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+            
+        }
+    </style>
+</head>
+<body>
+    <table cellpadding="15">
+        <tr>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Tuổi</th>
+            <th>Địa chỉ</th>
+            <th>Email</th>
+        </tr>
+    </table>
+
+    <script>
+        var stdList = [
+            {
+                "name" : "Vũ Đức Anh",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "vuducanh0125@gmail.com"
+            },
+            {
+                "name" : "Mai Hiểu Minh",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "minhminh24102003@gmail.com"
+            },
+            {
+                "name" : "Dương Trinh Nam",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "dngTrinhNam@gmail.com"
+            },
+            {
+                "name" : "Nguyễn Thanh Tùng",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "tugNg1103@gmail.com"
+            },
+            {
+                "name" : "Nguyễn Hồng Ngọc",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "nenebiethet0708@gmail.com"
+            },
+            {
+                "name" : "Đàm Quang Vinh",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "vinhqaung123@gmail.com"
+            },
+            {
+                "name" : "Nguyễn Bá Khuê",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "khueBa5836@gmail.com"
+            },
+            {
+                "name" : "Dương Hồng Ngọc",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "ngocDg456@gmail.com"
+            },
+            {
+                "name" : "Phùng Thái Hà",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "HaPhungknowyou@gmail.com"
+            },
+            {
+                "name" : "Nguyễn Thu Hà",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "ilovethaiha789@gmail.com"
+            },
+            {
+                "name" : "Vũ Diễm Quỳnh",
+                "age" : "16",
+                "address" : "Ha Noi",
+                "email" : "diemquynh1208@gmail.com"
+            },
+            {
+                "name" : "Trần Kiều Anh",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "KATraN452@gmail.com"
+            },
+            {
+                "name" : "Vương Nhật Thương",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "thuongthuong@gmail.com"
+            },
+            {
+                "name" : "Phạm Anh Tú",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "Tupham2419@gmail.com"
+            },
+            {
+                "name" : "Trần Xuân Quý",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "quỹuantran@gmail.com"
+            },
+            {
+                "name" : "Nguyễn Trưởng",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "truongonlearing@gmail.com"
+            },
+            {
+                "name" : "Mai Thu Cúc",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "cucJPese@gmail.com"
+            },
+            {
+                "name" : "Nguyễn Ngọc Trọng",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "heavysoami@gmail.com"
+            },
+            {
+                "name" : "Mì Cô Cô Mi",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "kokomi1103@gmail.com"
+            },
+            {
+                "name" : "Mì Hảo Hảo",
+                "age" : "18",
+                "address" : "Ha Noi",
+                "email" : "haohao4769@gmail.com"
+            },
+        ];
+
+        var index = 1;
+        for(std of stdList) {
+            document.write(`<tr>
+                            <td>${++index}</td> 
+                            <td>${std.name}</td> 
+                            <td>${std.age}</td> 
+                            <td>${std.address}</td> 
+                            <td>${std.email}</td> 
+                        `)
+        }
+    </script>
+</body>
+</html>

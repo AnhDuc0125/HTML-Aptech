@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 1</title>
+    <style>
+        .title {
+            height: 150px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        Giải phương trình bậc 1
+    </div>
+    <div class="boxed">
+        <button onclick="value_a()">Nhập giá trị A</button>
+        <button onclick="value_b()">Nhập giá trị b</button>
+        <button onclick="print()">In kết quả</button>
+    </div>
+    <script>
+        var a;
+        var b;
+        var result;
+        function value_a(){
+            a = prompt('Nhap gia tri a:');
+        }
+
+        function value_b(){
+            b = prompt('Nhap gia tri b:');
+        }
+
+        function print(){
+            result = -b / a;
+            alert(result);
+        }
+    </script>
+</body>
+</html>
