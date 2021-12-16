@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Login</h2>
+        <form action="">
+            <div class="form-inner">
+                <label for="">Username: </label>
+                <input type="text" id="username_id" required placeholder="Input username">
+            </div>
+            <div class="form-inner">
+                <label for="">Password: </label>
+                <input type="text" id="password_id" required placeholder="Input password">
+            </div>
+            <button type="button" onsubmit="checkLogin()">Login</button>
+        </form>
+    </div>
+    <script>
+        var usernameTag = document.getElementById('username_id')
+        var passwordTag = document.getElementById('password_id')
+
+        function checkLogin() {
+            console.log("123234")
+            if(usernameTag.value == 'admin' && passwordTag.value == '123456') {
+                alert('Login success!\nRedirecting to next page...')
+            } else {
+                alert('Login failed!\nIncorrect username or password!')
+            }
+        }
+    </script>
+</body>
+</html>

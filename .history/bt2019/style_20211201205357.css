@@ -1,0 +1,19 @@
+label, select, input {
+    display: block;
+    margin: 15px;
+    width: 100%;
+}
+
+.table1 {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.header {
+    text-align: center;
+    background-color: #337ab7;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+}

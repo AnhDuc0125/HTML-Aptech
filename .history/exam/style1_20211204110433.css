@@ -1,0 +1,23 @@
+body {
+    background-color: darkblue;
+}
+
+.main_body {
+    width: 800px;
+    border: double 3px black;
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    display: table;
+}
+
+
+.input_container, .form_control {
+    display: flex;
+}
+label , .input_container{
+    display: table-cell;
+}

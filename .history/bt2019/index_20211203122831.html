@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <style>
+        .wrapper {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .input {
+            margin: 15px 15px 30px;
+            border: 1px solid #337ab7;
+        }
+
+        .table {
+            margin: 15px;
+        }   
+        
+        .header {
+            background-color: #337ab7;
+            color: white;
+            padding: 15px;
+            text-transform: uppercase;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            word-spacing: 5px;
+        }
+
+        .form-control label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-control label, .form-control select, .form-control input{
+            display: block;
+            width: 99%;
+            font-size: 20px;
+        }
+
+        .form-control {
+            margin: 15px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            margin-right: 15px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .reset-btn {
+            background-color: #f1ad4d;
+            color: white;
+        }
+
+        .add-btn {
+            background-color: #5cb85c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="input">
+            <div class="header">
+                Input product's detail information
+            </div>
+            <div class="input-container">
+                <form action="post">
+                    <div class="form-control">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" id="product-name-id">
+                    </div>
+                    <div class="form-control">
+                        <label for="Manufacturer-name">Manufacturer Name</label>
+                        <select id="manufacturer-name-id" onchange="changeManu()">
+                            <option value="">-- Choose --</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="category-name">Category Name</label>
+                        <select id="category-name-id">
+                            <option value="">-- Choose --</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="price">Price</label>
+                        <input type="number" id="price-id">
+                    </div>
+                    <div class="form-control">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity-id" onchange="addTotalPrice()">
+                    </div>
+                    <div class="form-control">
+                        <label for="total-price">Total Price</label>
+                        <input type="number" id="total-price-id">
+                    </div>
+                    <div class="form-control">
+                        <button type="button" class="add-btn btn" onclick="showList()">Add Product</button>
+                        <button type="reset" class="reset-btn btn" onclick="reset_input()">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="table">
+            <div class="header">
+                Management Products
+            </div>
+            <div class="list">
+                <table border="1" cellpadding="10" style="text-align: center; border-collapse: collapse; width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product</th>
+                            <th>Category Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Manufacturer Name</th>
+                            <th>Total Price</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="result">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        var manuList = {
+            "Apple" : ["Iphone 11", "Iphone 12", "Iphone 13"],
+            "SamSung" : ["SamSung Galaxy S1", "SamSung Galaxy S2", "SamSung Galaxy S3"],
+            "Google" : ["Google Pixel 4", "Google Pixel 5", "Google Pixel 6"]
+        }
+
+        manuListTag = document.getElementById('manufacturer-name-id')
+        for(manu in manuList) {
+            manuListTag.innerHTML += (` <option value="${manu}">${manu}</option>`)
+        }
+
+        function changeManu() {
+            var key = manuListTag.value
+            var cateList = manuList[key]
+            var cateTag = document.getElementById('category-name-id')
+            cateTag.innerHTML = ''
+            for(cate of cateList){
+                cateTag.innerHTML += (`<option value="${cate}">${cate}</option>`)
+            }
+        }
+
+        function addTotalPrice() {
+            var priceTag = document.getElementById('price-id').value
+            var quantityTag = document.getElementById('quantity-id').value
+            var totalPrice = priceTag * quantityTag
+            
+            totalPriceTag = document.getElementById('total-price-id').value = totalPrice
+        }
+
+        function reset_input() {
+            cateTag = document.getElementById('category-name-id')
+            cateTag.innerHTML = (`<option value="">-- Choose --</option>`)
+        }
+        
+        var index = 0
+        function showList() {
+            productTag = document.getElementById('product-name-id').value
+            cateTag = document.getElementById('category-name-id').value
+            priceTag = document.getElementById('price-id').value
+            quantityTag = document.getElementById('quantity-id').value
+            manuTag = document.getElementById('manufacturer-name-id').value
+            totalPriceTag = document.getElementById('total-price-id').value
+
+            product = {
+                'productTag' : productTag,
+                'cateTag' : cateTag,
+                'priceTag' : priceTag,
+                'quantityTag' : quantityTag,
+                'manuTag' : manuTag,
+                'totalPriceTag' : totalPriceTag
+            }
+
+            productList = []
+            productList.push(product)
+
+            document.getElementById('result').innerHTML += (`
+                <tr>
+                    <td>${index}</td>
+                    <td>${productList[index].productTag}</td>
+                    <td>${productList[index].cateTag}</td>
+                    <td>${productList[index].priceTag}</td>
+                    <td>${productList[index].quantityTag}</td>
+                    <td>${productList[index].manuTag}</td>
+                    <td>${productList[index].totalPriceTag}</td>
+                    <td><button>Edit</button></td>
+                    <td><button>Delete</button></td>
+                </tr>
+            `)    
+        }
+
+        function deleteProduct(index) {
+
+        }
+
+    </script>
+</body>
+</html>

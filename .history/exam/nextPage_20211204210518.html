@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Document</title>
+</head>
+<body onload="init()">
+    <div class="main_body">
+        <div class="input">
+            <h2>Student Management</h2>
+            <form action="">
+                <table>
+                    <tr>
+                        <td class="td-left"><label for="">Student Name:</label></td>
+                        <td><input type="text" id="name_id"></td>
+                    </tr>
+                    <tr>
+                        <td class="td-left"><label for="">Student DOB:</label></td>
+                        <td><input type="date" id="dob_id"></td>
+                    </tr>
+                    <tr>
+                        <td class="td-left"><label for="">Student Gender:</label></td>
+                        <td> <div class="input_container">
+                            <input type="radio" name="sex" value="Male" id="gender_id"> Male
+                            <input type="radio" name="sex" value="Female" id="gender_id"> Female
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td class="td-left"> <label for="">Student Language:</label></td>
+                        <td><div class="input_container">
+                            <input type="checkbox" value="English" id="language_id">
+                            <label for="language_id">English</label>
+                            <input type="checkbox" value="Vietnamese" id="language_id">
+                            <label for="language_id">Vietnamese</label>
+                            <input type="checkbox" value="Japanese" id="language_id">
+                            <label for="language_id">Japanese</label>
+                            <input type="checkbox" value="Chinese" id="language_id">
+                            <label for="language_id">Chinese</label>
+                            <input type="checkbox" value="French" id="language_id">
+                            <label for="language_id">French</label>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td class="td-left"> <label for="">Student Class:</label></td>
+                        <td> <div class="input_container">
+                            <select name="" id="class_id">
+                                <option value="">-- Choose --</option>
+                                <option value="C1608G">C1608G</option>
+                                <option value="C1208G">C2108L</option>
+                            </select>
+                            <a href="#" id="add_class" onclick="add_class()">Add Class</a>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td class="td_left"></td>
+                        <td><button type="button" onclick="add_std_list()">Add</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="table_infomation">
+            <h2>Student List</h2>
+            <table class="table" border="2" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>DOB</th>
+                        <th>Gender</th>
+                        <th>Language</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="result">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        
+        var student_list = []
+        var index = 0
+        function add_class() {
+            var new_class = prompt('Input new class name:')
+            var class_list = document.getElementById('class_id')
+            class_list.innerHTML += (`<option value="${new_class}">${new_class}</option>`)
+            alert('New class added successfully!')
+        }
+        
+        function add_std_list() {
+            var name = document.getElementById('name_id').value
+            var classTag = document.getElementById('class_id').value
+            var dob = document.getElementById('dob_id').value
+            var gender = document.getElementsByName('sex')
+                for (var i=0; i<gender.length; i++) {
+                    if(gender[i].checked) {
+                        var sexTag = gender[i].value;
+                        break;
+                    }
+                }
+            var language = document.getElementById('language_id').value
+
+            
+            var fill_list = document.getElementById('result')
+            fill_list.innerHTML += (`
+            <tr>
+                <th>${name}</th>
+                <th>${classTag}</th>
+                <th>${dob}</th>
+                <th>${sexTag}</th>                       
+                <th>${language}</th>
+                <th><a href="#" onclick="">Delete</a></th>
+                </tr>`)
+           
+                var student = {
+                    "name" : name,
+                    "class" : classTag,
+                    "dob" : dob,
+                    "gender" : sexTag,
+                    "language" : language
+                }
+    
+                student_list.push(student)
+        }
+
+        function delete_std(index) {
+            confirm('Are you sure to delete?')
+
+        }
+
+        function show_list() {
+            for(i=0; i<student_list.length; i++) {
+                fill_list.innerHTML += (`
+                <tr>
+                    <th>${student_list[i].name}</th>
+                    <th>${student_list[i].class}</th>
+                    <th>${student_list[i].dob}</th>
+                    <th>${student_list[i].gender}</th>                       
+                    <th>${student_list[i].language}</th>
+                    <th><a href="#" onclick="">Delete</a></th>
+                </tr>`)
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

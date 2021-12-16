@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Management Product</title>
+</head>
+<body>
+    <div class="table-input">
+        <div class="header">
+            Input product's detail information
+        </div>
+        <div class="input-form">
+            <form>
+                <div class="manufacturer">
+                    <label for="manu">Manufacturer Name</label>
+                    <input list="manufacturer" type="text" id="manu-name">
+                    <datalist id="manufacturer">
+                        <option value="Apple">
+                        <option value="SamSung">
+                        <option value="LG">
+                        <option value="Google">
+                        <option value="Sony">
+                    </datalist>
+                </div>
+                <div class="product">
+                    <label for="product-name">Product Name</label>
+                    <input type="text" id="pro-name">
+                </div>
+                <div class="category">
+                    <label for="cate">Category Name</label>
+                    <input type="text" id="cate-name">
+                </div>
+                <div class="price">
+                    <label for="price">Price</label>
+                    <input type="number" id="price">
+                </div>
+                <div class="quantity">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity">
+                </div>
+                <div class="total-price">
+                    <label for="total-price">Total Price</label>
+                    <input type="text" id="total-price">
+                </div>
+                <button type="submit" id="button-sub" onclick="clickToSave()">Adđ</button>
+            </form>
+        </div>
+    </div>
+    <div class="table-info">
+        <div class="header">
+            Input product's detail information
+        </div>
+        <div class="table">
+            <table cellpadding = "10" border="1" style="border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Produce Name</th>
+                        <th>Category Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Manufaturer</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="result">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

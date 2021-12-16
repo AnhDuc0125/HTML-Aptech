@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Test</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="text">Đăng nhập hệ thống</div>
+            <img src="./photos/login.png" alt="" class="img">
+            <div class="login">
+                    <form>
+                        <div class="form-control">
+                            <label for="">Tài khoản</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="">Mật khẩu</label>
+                            <input type="password" required>
+                        </div>
+                            <button type="submit" onsubmit="alo()">Đăng nhập</button>
+                            <button>Nhập lại</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function alo() {
+            alert('Đăng nhập thành công nè!!!')
+        }
+    </script>
+</body>
+</html>

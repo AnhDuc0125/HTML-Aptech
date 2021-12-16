@@ -1,0 +1,19 @@
+body {
+    background-color: darkblue;
+}
+
+.main_body {
+    width: 800px;
+    border: double 3px black;
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    display: table;
+}
+
+label , .input-container {
+    display: table-cell;
+}

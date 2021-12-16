@@ -1,0 +1,20 @@
+.container {
+    background-color: #FFFFCC;
+}
+
+#title {
+    color: #0000CC;
+    font-family: Arial;
+}
+
+.img_title {
+    width: 80%;
+}
+
+#book_name {
+    width: 200%;
+}
+
+label {
+    float: right;
+}

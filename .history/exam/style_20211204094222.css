@@ -1,0 +1,7 @@
+body {
+    background-color: darkblue;
+}
+
+.wrapper {
+    border: double 5px black;
+}

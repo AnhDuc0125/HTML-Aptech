@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Quản lý sản phẩm</title>
+</head>
+<body>
+    <div class="container">
+        <div class="table1">
+            <div class="header">
+                Input product's detail information
+            </div>
+            <div class="body">
+                <form class="form">
+
+                    <label for="Manufacturer Name">Manufacturer Name</label>
+                    <select name="form-control" id="manu_name" onchange="change_manu()">
+                        <option value="">-- Choose --</option>
+                    </select>
+
+                    <label for="category">Category Name</label>
+                    <select name="form-control" id="category_name">
+                        <option value="">-- Choose --</option>
+                    </select>
+
+                    <label for="price">Price</label>
+                    <input type="number" id="price_id">
+
+                    <label for="quantity">Quantity</label>
+                    <input type="number">
+
+                    <label for="total_price">Total Price</label>
+                    <input type="number">
+                </form>
+                <button type="submit" onclick="add()">Add Product</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var manuList = {
+            "Apple" : ["A1", "A2", "A3"],
+            "SamSung" : ["S1", "S2", "S3"],
+            "LG" : ["L1", "L2", "L3"]
+        }
+
+        var manuListTag = document.getElementById('manu_name')
+        for(var key in manuList){
+            manuListTag.innerHTML += `<option value='${key}'>${key}</option>`
+        }
+
+        function change_manu() {
+            key = manuListTag.value
+            categoryList = manuList[key]
+            console.log(categoryList)
+            cateListTag = document.getElementById('category_name')
+            cateListTag.innerHTML = ''
+            for(var cat of categoryList){
+                cateListTag.innerHTML += `<option value='${cat}'>${cat}</option>`
+            }
+        }
+    </script>
+</body>
+</html>

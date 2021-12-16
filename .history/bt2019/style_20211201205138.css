@@ -1,0 +1,8 @@
+label, select, input {
+    display: block;
+    margin: 15px;
+}
+
+.table1 {
+    width: 90%;
+}

@@ -1,0 +1,25 @@
+body {
+    background-color: darkblue;
+}
+
+.main_body {
+    width: 800px;
+    border: double 3px black;
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+td {
+    text-align: left;
+}
+
+.td_left {
+    text-align: right;
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
