@@ -1,0 +1,11 @@
+body {
+    font-family: arial;
+}
+
+h1, h2 {
+    color: #337ab7;
+}
+
+.time_detail {
+    color: #999;
+}

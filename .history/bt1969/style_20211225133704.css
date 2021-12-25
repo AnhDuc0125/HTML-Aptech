@@ -1,0 +1,44 @@
+body {
+    position: relative;
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #e8ecef;
+}
+
+.top {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid grey;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1, h2 {
+    color: #337ab7;
+}
+
+.time_detail {
+    color: #999;
+}
+
+button {
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    border-radius: 50%;
+}

@@ -1,0 +1,19 @@
+body {
+    font-family: roboto;
+}
+
+.header-top {
+    display: flex;
+}
+
+.header-top_left {
+    color: white;
+    background-color: red;
+    width: 50px;
+    padding: 5px;
+}
+
+.header-top_right {
+
+    margin: 0 auto;
+}

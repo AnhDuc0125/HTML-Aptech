@@ -1,0 +1,46 @@
+body {
+    font-family: roboto;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+}
+
+.header-top_left {
+    color: white;
+    background-color: red;
+    width: 50px;
+    padding: 5px;
+}
+
+.header-top_right {
+    margin: 0 auto;
+}
+
+.nav_bar {
+    display: flex;
+    list-style-type: none;
+    background-color: #337ab7;
+    justify-content: center;
+}
+
+.nav_item {
+    padding: 0px 15px;
+    margin: 15px;
+    color: white;
+    border-right: solid 0.5px white;
+}
+
+main {
+    width: 80%;
+    display: flex;
+}
+
+.main_left {
+    width: 70%;
+}
+
+.main_right {
+    width: 30%;
+}

@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 80%;
+    font-family: arial;
+    margin: 0 auto;
+}
+
+img {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.detail {
+    display: inline-block;
+}
+
+h1 {
+    color: #337ab7;
+}

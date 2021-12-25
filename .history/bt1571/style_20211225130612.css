@@ -1,0 +1,8 @@
+header {
+    font-family: arial;
+    display: flex;
+}
+
+h1 {
+    color: #337ab7;
+}

@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 80%;
+    font-family: arial;
+}
+
+img {
+    display: inline-block;
+}
+
+h1 {
+    color: #337ab7;
+}

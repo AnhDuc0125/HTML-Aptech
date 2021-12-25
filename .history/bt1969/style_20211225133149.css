@@ -1,0 +1,21 @@
+body {
+    font-family: arial;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+h1, h2 {
+    color: #337ab7;
+}
+
+.time_detail {
+    color: #999;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    border-radius: 50%;
+}

@@ -1,0 +1,15 @@
+body {
+    font-family: roboto;
+}
+
+.header-top_left {
+    color: white;
+    background-color: red;
+    display: inline-block;
+    width: 50px;
+    padding: 5px;
+}
+
+.header-top_right {
+    display: inline-block;
+}
